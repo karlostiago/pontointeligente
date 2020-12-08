@@ -12,5 +12,5 @@ data class Empresa (
         val razaoSocial: String,
 
         @Column(nullable = false)
-        val cnpj: String? = null
+        val cnpj: String
 )

@@ -7,7 +7,7 @@ import javax.validation.constraints.Email
 import javax.validation.constraints.NotEmpty
 
 data class CadastroPessoaFisicaDTO (
-        val id: String,
+        val id: String?,
 
         @NotEmpty(message = "Nome não pode ser vázio")
         @Length(min = 3, max = 100, message = "Nome deve conter entre 3 e 100 caracteres")
@@ -30,8 +30,8 @@ data class CadastroPessoaFisicaDTO (
         @CNPJ(message = "CNPJ inválido")
         val cnpj: String = "",
 
-        val empresa: String,
-        val valorHora: String,
-        val qtdHorasTralhadoDia: String,
-        val qtdHorasAlmoco: String
+        val empresa: String?,
+        val valorHora: String?,
+        val qtdHorasTralhadoDia: String?,
+        val qtdHorasAlmoco: String?
 )
