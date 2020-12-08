@@ -43,7 +43,7 @@ class FuncionarioController(val funcionarioService: FuncionarioService) {
 
     private fun converterFuncionarioDTO(funcionario: Funcionario): FuncionarioDTO {
         return FuncionarioDTO(funcionario.id.toString(), funcionario.nome, funcionario.email,
-            funcionario?.senha, funcionario.valorHora?.toString(), funcionario.qtdHorasTralhadoDia?.toString(),
+            funcionario.senha, funcionario.valorHora?.toString(), funcionario.qtdHorasTralhadoDia?.toString(),
             funcionario.qtdHorasAlmoco?.toString())
     }
 

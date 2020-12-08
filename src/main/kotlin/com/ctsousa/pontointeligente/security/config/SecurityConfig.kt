@@ -1,7 +1,6 @@
 package com.ctsousa.pontointeligente.security.config
 
 import com.ctsousa.pontointeligente.security.service.FuncionarioDetailsService
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider
@@ -12,10 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
 import org.springframework.security.config.http.SessionCreationPolicy
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
-import org.springframework.security.crypto.factory.PasswordEncoderFactories
 import org.springframework.security.crypto.password.PasswordEncoder
-import org.springframework.security.web.AuthenticationEntryPoint
-import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint
 
 @Configuration
 @EnableWebSecurity
@@ -53,6 +49,6 @@ class SecurityConfig(val funcionarioDetailsService: FuncionarioDetailsService) :
                 ?.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             ?.and()
                 ?.csrf()
-                ?.disable()
+                    ?.disable()
     }
 }

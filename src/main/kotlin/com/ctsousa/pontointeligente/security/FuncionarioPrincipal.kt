@@ -14,11 +14,11 @@ class FuncionarioPrincipal(val funcionario: Funcionario) : UserDetails {
     }
 
     override fun getPassword(): String {
-        return funcionario.email
+        return funcionario.senha
     }
 
     override fun getUsername(): String {
-        return funcionario.senha
+        return funcionario.email
     }
 
     override fun isAccountNonExpired(): Boolean {
